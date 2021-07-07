@@ -1,0 +1,80 @@
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+    "username": "levanmanh",
+    "email":"levanmanh@admin.com",
+    "password": "123456",
+    "confirm_password": "123456"
+}
+
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email": "levanmanh@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGYxZTJhNWRkYThlMWU5ODdiMmRhNCIsImlhdCI6MTYyNTIzNDk4NiwiZXhwIjoxNjI1ODM5Nzg2fQ.Fr7LB6hwHJ8yHNR8pjbolVJSFI3iLznMXv4ap44zdn0
+
+###
+GET http://localhost:5000/api/users/60de84c3197ec40e88d3e1f4
+
+###
+DELETE http://localhost:5000/api/users/60de84c3197ec40e88d3e1f4
+
+###
+PUT http://localhost:5000/api/users/60dee56202b2d33bfc9c8c26
+Content-Type: application/json
+
+{
+    "username": "lv",
+    "email": "lv@gmail.com"
+}
+
+
+###
+POST http://localhost:5000/api/destroy
+
+###
+GET http://localhost:5000/api/categories
+
+
+###
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+
+{
+    "name": "Chính trị"
+}
+
+###
+PUT http://localhost:5000/api/categories/60e00517426065282402df65
+Content-Type: application/json
+
+{
+    "name": "Chính trị 1"
+}
+
+###
+DELETE http://localhost:5000/api/categories/60e00517426065282402df65
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZTAyZTgwZTQ2YjIxMGUxODk4MWZiNiIsImlhdCI6MTYyNTMwNDcwNCwiZXhwIjoxNjI1OTA5NTA0fQ.MMIOQizi6R-swEPCmV5TYvK5bXr9XZJBY1TA-z5zmQ4
+
+{
+    "title":"Tiêu đề 1",
+    "descriptions": "Mô tả 1",
+    "content": "Nội dung 1",
+    "images": {
+
+    },
+    "category":"Tài chính"
+}
